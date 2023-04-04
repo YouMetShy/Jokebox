@@ -1,0 +1,45 @@
+<template name="createUserForm">
+    <div class="modal modal-sm fade" tabindex="-1" id="createUserModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create New User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="First" aria-label="First"
+                            id="nu-Fname">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Last" aria-label="Last"
+                            id="nu-Lname">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                            id="nu-name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email" aria-label="Email"
+                            id="nu-email">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" min=6 max=6 class="form-control" placeholder="Password" aria-label="Password"
+                            id="nu-password">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="confirmPassword" class="form-control" placeholder="confirmPassword"
+                            aria-label="confirmPassword" id="nu-confirmPassword">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary js-createUser js-showLogin">Create User</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>
