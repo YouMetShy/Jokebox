@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base'
 import '../lib/collections.js'
 
+
 Meteor.startup(() => {
   // code to run on server at startup
   if (!Accounts.findUserByUsername('admin')) {

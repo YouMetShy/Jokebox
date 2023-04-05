@@ -1,5 +1,7 @@
 import { Meteor } from 'meteor/meteor';
-import * as bootstrap from 'bootstrap'
+import * as bootstrap from 'bootstrap';
+import { Template } from 'meteor/templating';
+import './loginForm.html'
 
 Template.loginForm.events({
     'click .js-logIn'() {
@@ -14,7 +16,6 @@ Template.loginForm.events({
             }
         })
         console.warn(`loggin in with username: ${username} and password: ${password}`)
-        loginModal.hide()
     },
     'click .js-showCreateUser'() {
         const loginModal = bootstrap.Modal.getInstance("#loginModal")
@@ -24,3 +25,16 @@ Template.loginForm.events({
         createUserModal.show()
     }
 })
+
+Template.loginForm.events({
+    'click .js-logIn'(event, instance) {
+      event.preventDefault();
+      unloadLoginForm();
+    },
+  });
+  
+  function unloadLoginForm() {
+    $('#loginModal').modal('hide');
+    $('body').removeClass('modal-open');
+    $('.modal-backdrop').remove();
+  }
