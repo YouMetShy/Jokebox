@@ -7,7 +7,10 @@ Template.Profile.helpers({
   Template.Profile.events({
     'submit form'(event, template) {
       event.preventDefault();
-
+  
+      const password = template.find('#password').value;
+      const confirmPassword = template.find('#confirm-password').value;
+      const ProfileImage = template.find('#Profile-image').value;
   
       if (password !== '' || confirmPassword !== '') {
         if (password !== confirmPassword) {
