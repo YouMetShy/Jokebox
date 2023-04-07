@@ -1,3 +1,9 @@
+
+import '../lib/router.js'
+
+import './indexPage.html'
+import './notFound.html'
+
 import './navBar.html'
 import './navBar.js'
 

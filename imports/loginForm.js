@@ -1,7 +1,6 @@
 import { Meteor } from 'meteor/meteor';
-import * as bootstrap from 'bootstrap';
-import { Template } from 'meteor/templating';
-import './loginForm.html'
+import * as bootstrap from 'bootstrap'
+import { FlowRouter } from 'meteor/ostrio:flow-router-extra'
 
 Template.loginForm.events({
     'click .js-logIn'() {
@@ -11,30 +10,20 @@ Template.loginForm.events({
             if (err)
                 console.error(`error: ${err}`)
             else {
-                if (result)
+                if (result) {
                     console.debug(`result: ${result}`)
+                }
+                FlowRouter.go('addProfile')
             }
         })
         console.warn(`loggin in with username: ${username} and password: ${password}`)
     },
     'click .js-showCreateUser'() {
-        const loginModal = bootstrap.Modal.getInstance("#loginModal")
-        loginModal.hide()
-        const createUserModal = new bootstrap.Modal("#createUserModal")
+        // const loginModal = bootstrap.Modal.getInstance("#loginModal")
+        // loginModal.hide()
+        // const createUserModal = new bootstrap.Modal("#createUserModal")
         console.log('show create user dialog')
-        createUserModal.show()
+        FlowRouter.go('createUser')
+        // createUserModal.show()
     }
 })
-
-Template.loginForm.events({
-    'click .js-logIn'(event, instance) {
-      event.preventDefault();
-      unloadLoginForm();
-    },
-  });
-  
-  function unloadLoginForm() {
-    $('#loginModal').modal('hide');
-    $('body').removeClass('modal-open');
-    $('.modal-backdrop').remove();
-  }

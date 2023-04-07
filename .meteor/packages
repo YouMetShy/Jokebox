@@ -27,3 +27,6 @@ barbatus:stars-rating
 accounts-github@1.5.0
 accounts-password@2.3.4
 http
+momentjs:moment
+kadira:blaze-layout
+ostrio:flow-router-extra

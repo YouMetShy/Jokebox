@@ -1,6 +1,3 @@
-import { Meteor } from 'meteor/meteor';
-import * as bootstrap from 'bootstrap'
-
 Template.createUserForm.events({
     'click .js-createUser'() {
         let username = document.querySelector("#nu-name")
@@ -20,13 +17,5 @@ Template.createUserForm.events({
                 }
             })
         }
-    },
-
-    'click .js-showLogin'() {
-        const createUserModal = bootstrap.Modal.getInstance("#createUserModal")
-        createUserModal.hide()
-        const loginModal = new bootstrap.Modal('#loginModal', {})
-        loginModal.show()
-    },
+    }
 })
-
