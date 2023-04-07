@@ -15,3 +15,6 @@ import './loginForm.js'
 
 import './createUserForm.html'
 import './createUserForm.js'
+
+import './Profile.html'
+import './Profile.js'
