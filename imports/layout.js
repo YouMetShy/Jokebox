@@ -18,3 +18,6 @@ import './createUserForm.js'
 
 import './Profile.html'
 import './Profile.js'
+
+import './collection.html'
+import './collection.js'

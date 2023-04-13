@@ -38,11 +38,12 @@ form input[type="file"] {
 body {
   padding: 10px;
   font-family: sans-serif;
+  background: url(https://www.solidbackgrounds.com/images/2560x1600/2560x1600-dark-cyan-solid-color-background.jpg);
+  background-size:500px;
 }
 .container {
   width: 400px;
   height: 700px;
-  border: solid 2px #fff;
 
 }
 

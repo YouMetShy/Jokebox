@@ -1,7 +1,10 @@
 <template name="Home">
   {{#if currentUser}}
-  <h1>Welcome to the Home Page</h1>
-  <p>Here's a joke for you:</p>
-  <div id="joke">{{ joke }}</div>
+    <h1>Welcome to the Home Page</h1>
+    <p>Here's a joke for you:</p>
+    <div id="joke">{{ joke }}</div>
+    <label for="jokeName">Joke name:</label>
+    <input type="text" id="jokeName" name="jokeName">
+    <button id="addToCollection">Add to collection</button>
   {{/if}}
 </template>

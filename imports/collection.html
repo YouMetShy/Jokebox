@@ -1,0 +1,9 @@
+<template name="collection">
+    <h1>Your Joke Collection</h1>
+    {{#each jokes}}
+      <div class="joke">
+        <h2>{{ name }}</h2>
+        <p>{{ joke }}</p>
+      </div>
+    {{/each}}
+  </template>
