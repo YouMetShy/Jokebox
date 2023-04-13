@@ -21,8 +21,8 @@ Meteor.methods({
   }
 })
 
-Meteor.publish('profData', () => {
-  return jokeboxdb.find({}, {
-    fields: { 'first': 1, 'age':1 }
+Meteor.publish('Collect', () => {
+  return Jokes.find({}, {
+    fields: { 'name': 1, 'joke':1 }
   })
 })

@@ -1,3 +1,5 @@
+import { Accounts } from 'meteor/accounts-base'
+
 Template.Profile.helpers({
     currentUser() {
       return Meteor.user();

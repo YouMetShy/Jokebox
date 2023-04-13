@@ -13,7 +13,7 @@ Template.Home.onRendered(function() {
       .catch(error => console.error(error));
   };
 
-  const saveJoke = () => {
+   const saveJoke = () => {
     const jokeName = document.querySelector('#jokeName').value;
     const joke = document.querySelector('#joke').innerHTML;
     // Here you can save the joke using a database or any other method you prefer
@@ -30,7 +30,8 @@ Template.Home.events({
   'click #addToCollection': function(event, template) {
     var jokeName = template.find('#jokeName').value;
     var joke = template.find('#joke').innerHTML;
-
+    console.warn(jokeName, joke)
+    
     Jokes.insert({
       name: jokeName,
       joke: joke
