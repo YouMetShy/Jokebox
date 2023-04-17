@@ -3,7 +3,10 @@
     <h1>My Joke Collection</h1>
     <ul>
       {{#each jokes}}
-        <li>{{name}}: {{joke}}</li>
+        <li>
+          {{name}}: {{joke}}
+          <button class="delete-joke" data-id="{{_id}}">Delete</button>
+        </li>
       {{/each}}
     </ul>
   </div>

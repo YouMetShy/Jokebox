@@ -21,6 +21,14 @@ Meteor.methods({
   }
 })
 
+Meteor.methods({
+  'jokes.remove'(jokeId) {
+    check(jokeId, String);
+    Jokes.remove(jokeId);
+  }
+});
+
+
 Meteor.publish('Collect', () => {
   return Jokes.find({}, {
     fields: { 'name': 1, 'joke':1 }
