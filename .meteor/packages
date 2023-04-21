@@ -30,3 +30,5 @@ http
 momentjs:moment
 kadira:blaze-layout
 ostrio:flow-router-extra
+check
+alanning:roles

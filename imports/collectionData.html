@@ -6,6 +6,8 @@
         <li>
           {{name}}: {{joke}}
           <button class="delete-joke" data-id="{{_id}}">Delete</button>
+          <button class="like-joke" data-id="{{_id}}">Like</button>
+          <span class="likes-count">{{likes}}</span>
         </li>
       {{/each}}
     </ul>

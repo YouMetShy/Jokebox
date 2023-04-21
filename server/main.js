@@ -28,6 +28,18 @@ Meteor.methods({
   }
 });
 
+Meteor.methods({
+  'likeJoke': function(jokeId) {
+  check(jokeId, String);
+  const updated = Jokes.update({_id: jokeId}, {$inc: {likes: 1}});
+if (updated) {
+  return 'Joke liked!';
+} else {
+  throw new Meteor.Error('update-failed', 'Failed to update joke likes count');
+}
+}
+});
+
 
 Meteor.publish('Collect', () => {
   return Jokes.find({}, {
