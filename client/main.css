@@ -79,36 +79,6 @@ body {
     inset -60px 0 120px #0ff; /* right cyan */
 }
 
-
-.box {
-  width: 350px;
-  padding: 40px;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  background: #191919;
-  border: none;
-  border-radius: 25px;
-  text-align: center;
-}
-
-
-#button{
-  border: 2px solid #2ecc71;
-  background: none;
-  display: block;
-  margin: 0px auto;
-  text-align: center;
-  padding: 15px 40px;
-  outline: none;
-  color: white;
-  border-radius: 25px;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: 200;
-}
-
 .nav-link{
   color: #fff !important;
 }

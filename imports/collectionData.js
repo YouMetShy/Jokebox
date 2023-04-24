@@ -8,13 +8,9 @@ Template.collectionData.events({
   'click .delete-joke': function(event, template) {
     var jokeId = $(event.currentTarget).attr('data-id');
     Jokes.remove(jokeId);
-  },
-  owned() {
-    if (this.ownedId == Meteor.Jokes())
-        return true
-    return false
-}
+  }
 });
+
 
 Template.collectionData.events({
   'click .like-joke': function(event, template) {
@@ -25,6 +21,7 @@ Template.collectionData.events({
   console.log(error.reason);
   } else {
   console.log(result);
+  window.alert("Joke Liked!");
   }
   });
   }

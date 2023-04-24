@@ -5,9 +5,9 @@ import '../lib/collections.js'
 
 Meteor.startup(() => {
   // code to run on server at startup
-  if (!Accounts.findUserByUsername('admin')) {
+  if (!Accounts.findUserByUsername('yessir')) {
     console.log('Creating admin account')
-    Meteor.call('createNewUserAccount', 'admin', 'admin')
+    Meteor.call('createNewUserAccount', 'yessir', 'poop')
   }
 });
 

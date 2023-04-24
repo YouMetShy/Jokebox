@@ -21,3 +21,5 @@ import './Profile.js'
 
 import './collectionData.html'
 import './collectionData.js'
+
+import './indexPage.js'
